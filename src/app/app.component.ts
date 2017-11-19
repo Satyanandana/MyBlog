@@ -11,9 +11,9 @@ export class AppComponent implements OnInit {
 
   @HostListener('mouseover') onHover() {
   window.alert('hover');
-}
+  }
 
-  constructor(private el: ElementRef){
+  constructor(private el: ElementRef) {
 
   }
 

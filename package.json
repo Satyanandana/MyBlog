@@ -2,27 +2,36 @@
   "name": "my-app",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "app.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng build && node app.js",
+    "build": "ng build --watch",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.2.4",
+    "@angular/cli": "1.4.9",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
+    "@angular/compiler-cli": "^4.2.4",
     "@angular/core": "^4.2.4",
     "@angular/forms": "^4.2.4",
     "@angular/http": "^4.2.4",
+    "@angular/language-service": "^4.2.4",
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
     "core-js": "^2.4.1",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
     "rxjs": "^5.4.2",
+    "ts-node": "~3.2.0",
+    "typescript": "~2.3.3",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -45,5 +54,9 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.3.3"
+  },
+  "engines": {
+    "node": "~9.1.0",
+    "npm": "~5.5.1"
   }
 }
